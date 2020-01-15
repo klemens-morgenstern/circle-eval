@@ -5,13 +5,13 @@ jobs:
       - image: "buildpack-deps:bionic"
     steps:
       - checkout
-  request-testing:
-    docker:
-      - image: "buildpack-deps:bionic"
       - run:
           name: PrintEnv
           command: printenv
 
+  request-testing:
+    docker:
+      - image: "buildpack-deps:bionic"
     steps:
       - run:
           name: Do nothing really
