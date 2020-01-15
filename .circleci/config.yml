@@ -8,10 +8,14 @@ jobs:
   request-testing:
     docker:
       - image: "buildpack-deps:bionic"
+      - run:
+          name: PrintEnv
+          command: printenv
+
     steps:
       - run:
           name: Do nothing really
-          command: echo Done nothing
+          command: printenv
 
 workflows:
   build_and_test:
